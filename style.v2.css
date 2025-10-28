@@ -106,14 +106,13 @@ h1 {
 
 .btn.btn-outline {
   background: transparent;
-  color: var(--text);
-  border: 1px solid var(--outline);
+  color: var(--brand);
+  border: 1px solid var(--brand);
 }
 
 .btn.btn-outline:hover {
-  border-color: var(--brand);
-  color: var(--brand);
-  background: rgba(109,197,255,0.06);
+  background: var(--brand-700);
+  color: white;
 }
 
 .list {
@@ -132,3 +131,19 @@ h1 {
   color: var(--muted);
   font-size: 0.95rem;
 }
+
+/* Force all buttons solid/consistent */
+.buttons .btn {
+  background: var(--brand) !important;
+  color: #fff !important;
+  border: none !important;
+}
+.buttons .btn:hover {
+  background: var(--brand-700) !important;
+}
+.buttons .btn.btn-outline {
+  background: var(--brand) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
