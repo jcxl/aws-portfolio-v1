@@ -26,6 +26,7 @@ S3 (Static Website Hosting) → CloudFront (CDN & HTTPS) → Internet Users
 
 ## 📸 Live Demo Screenshot
 ![Demo Screenshot](images/demo-screenshot.png)
+[Click here to visit the live website](https://d3orwl4uesfcuc.cloudfront.net/)
 
 ---
 
@@ -38,4 +39,4 @@ This project demonstrates fundamental AWS skills:
 ---
 
 **Author:** Rayner Lee  
-**GitHub:** [YOUR_GITHUB_USERNAME](https://github.com/jcxl)
+**GitHub:** [jcxl](https://github.com/jcxl)
