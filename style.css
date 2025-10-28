@@ -1,0 +1,134 @@
+/* Base (dark mode default) */
+:root {
+  --bg: #0b0f14;
+  --card: #111821;
+  --text: #e6edf3;
+  --muted: #a6b3bf;
+  --brand: #6dc5ff;         /* link/button color */
+  --brand-700: #3ea8ef;
+  --outline: #2a3a4a;
+  --shadow: rgba(0,0,0,0.45);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1f2a37;
+    --muted: #475569;
+    --brand: #2563eb;
+    --brand-700: #1d4ed8;
+    --outline: #d8dee6;
+    --shadow: rgba(0,0,0,0.08);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 50% -10%, #14202b 0%, var(--bg) 55%) no-repeat, var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Centered card container */
+.container {
+  width: min(900px, 92vw);
+  margin: auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)) , var(--card);
+  padding: 48px 36px;
+  border: 1px solid var(--outline);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px var(--shadow);
+  text-align: center;
+}
+
+.container.narrow { width: min(720px, 92vw); }
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 6px auto 18px;
+  border: 2px solid var(--outline);
+  display: block;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 2.5vw + 1rem, 2.2rem);
+  margin: 0 0 6px 0;
+  letter-spacing: 0.2px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0 0 18px 0;
+}
+
+.intro {
+  margin: 0 auto 22px;
+  color: var(--text);
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.btn {
+  background: var(--brand);
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform .08s ease, background .2s ease;
+  display: inline-block;
+}
+
+.btn:hover { background: var(--brand-700); transform: translateY(-1px); }
+
+.btn:active { transform: translateY(0); }
+
+.btn.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--outline);
+}
+
+.btn.btn-outline:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+  background: rgba(109,197,255,0.06);
+}
+
+.list {
+  text-align: left;
+  margin: 10px auto 24px;
+  max-width: 60ch;
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+.footer {
+  width: 100%;
+  max-width: 980px;
+  margin: 10px auto 28px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

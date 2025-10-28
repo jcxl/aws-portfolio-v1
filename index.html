@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rayner Lee | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Rayner Lee — Aspiring Cloud & Cybersecurity Engineer. AWS portfolio project hosted on S3 + CloudFront." />
+</head>
+<body>
+  <main class="container">
+    <img src="images/profile.jpg" alt="Profile photo of Rayner Lee" class="profile-pic" />
+
+    <h1>Hi, I’m Rayner 👋</h1>
+    <p class="subtitle">Aspiring Cloud & Cybersecurity Engineer</p>
+
+    <p class="intro">
+      I’m learning AWS hands-on and documenting everything I build.
+      This site is my first project: hosted on <strong>Amazon S3</strong> and delivered via <strong>CloudFront</strong>.
+      More projects coming soon!
+    </p>
+
+    <nav class="buttons">
+      <a class="btn" href="about.html">About Me</a>
+      <a class="btn" href="https://github.com/jcxl" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-outline" href="mailto:jcxl@outlook.com">Contact</a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Rayner Lee</span>
+  </footer>
+
+  <script>
+    // set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
